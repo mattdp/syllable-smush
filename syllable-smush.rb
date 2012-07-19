@@ -31,7 +31,9 @@ def create_word(length, sylls)
 
 end
 
-how_many_words = 30
+
+!ARGV[0].nil? && ARGV[0].to_i > 0 ? how_many_words = ARGV[0].to_i : 30 #default 30 words if no args, else the specified number
+
 results = Array[]
 
 json_data = File.open("./assets/initial_rules.json","rb").read
